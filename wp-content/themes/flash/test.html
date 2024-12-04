@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Slider</title>
+    <link rel="stylesheet" href="path/to/swiper-bundle.min.css">
+    <style>
+        .swiper-container {
+            margin-bottom: 50px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-19.jpg" alt="Image 1"></div>
+            <div class="swiper-slide"><img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-19.jpg" alt="Image 2"></div>
+            <div class="swiper-slide"><img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-19.jpg" alt="Image 3"></div>
+            <div class="swiper-slide"><img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-19.jpg" alt="Image 4"></div>
+            <div class="swiper-slide"><img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-19.jpg" alt="Image 5"></div>
+            <div class="swiper-slide"><img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-19.jpg" alt="Image 6"></div>
+            <div class="swiper-slide"><img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-19.jpg" alt="Image 7"></div>
+            <div class="swiper-slide"><img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-19.jpg" alt="Image 8"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="path/to/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 6,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                },
+            }
+        });
+    </script>
+</body>
+</html>
